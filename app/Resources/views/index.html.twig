@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Clocks{% endblock %}
+
+{% block body %}
+    <div class="container-fluid" id="time-container" data-time="{{ time | json_encode }}">
+        <h1 class="text-center">Clocks</h1>
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Berlin</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="text-center" id="time-berlin"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">London</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="text-center" id="time-london"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="panel panel-warning">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">New York</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="text-center" id="time-newYork"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Kyiv</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="text-center" id="time-kyiv"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center">
+            <button class="btn btn-lg btn-success">Refresh</button>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="/assets/js/app.js"></script>
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+{% endblock %}
